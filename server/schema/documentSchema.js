@@ -10,6 +10,10 @@ const documentSchema = mongoose.Schema(
             type: String,
             required: false
         },
+        username: {
+            type: String,
+            required: false
+        },
         data: {
             type: Object,
             required: true

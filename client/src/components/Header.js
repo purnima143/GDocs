@@ -8,7 +8,7 @@ function Header({ componentRef, handleCopyClick, isCopied, fileName }) {
     return (
         <Navbar collapseOnSelect sticky="top" expand="lg" style={{ background: "white", padding: "2px" }}>
             <Container>
-                <Navbar.Brand href=""><img src={Logo} alt="GDocs" className='logo' />{fileName}</Navbar.Brand>
+                <Navbar.Brand href="/"><img src={Logo} alt="GDocs" className='logo' />{fileName}</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
