@@ -1,22 +1,17 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import React, { useEffect } from "react";
+import Google from "../assets/google.png"
 
 const LoginButton = () => {
-    const { loginWithRedirect, isAuthenticated, user } = useAuth0();
+  const { loginWithRedirect, isAuthenticated, user } = useAuth0();
 
-    useEffect(() => {
-        localStorage.setItem('email', user?.email)
-        localStorage.setItem('username', user?.nickname)
-        localStorage.setItem('pic', user?.picture)
+  useEffect(() => {
+    localStorage.setItem("email", user?.email);
+    localStorage.setItem("username", user?.nickname);
+    localStorage.setItem("pic", user?.picture);
+  }, [user]);
 
-    }, [user])
-    useEffect(() => {
-        localStorage.setItem('redirect_uri', window.location.href);
-    }, [])
-    return (
-        <button onClick={() => loginWithRedirect()}>
-            Log in
-        </button>)
+  return <button onClick={() => loginWithRedirect()} className='Gbtn'>      <img src={Google} alt="" style={{ width: "20px" }}></img>  Log in</button>;
 };
 
 export default LoginButton;

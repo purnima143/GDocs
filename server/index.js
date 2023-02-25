@@ -18,7 +18,20 @@ const io = new Server(httpServer, {
 })
 
 app.use(cors())
+app.delete('/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        console.log('delete', id)
+        const document = await Document.deleteOne({ _id: id })
+        res.status(200).json({
+            data: document,
+        })
+    }
+    catch (error) {
+        console.log("error is:", error)
+    }
 
+})
 app.get('/', async (req, res) => {
     try {
         const useremail = req.query.user
@@ -44,6 +57,7 @@ io.on('connection', socket => {
         socket.on('save-document', async data => {
             await updateDocument(documentId, data)
         })
+
 
     })
 })

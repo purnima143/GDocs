@@ -99,6 +99,9 @@
   padding: 0.6rem;
   width: 90%;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   border-bottom: 1px solid rgb(229, 226, 226);
 }
@@ -148,7 +151,13 @@
   box-shadow: 5px 5px 30px rgb(229, 227, 227) !important;
   padding: 0px 10px !important;
 }
-
+.Gbtn {
+  box-shadow: 5px 5px 30px rgb(229, 227, 227) !important;
+  background-color: white;
+  padding: 2px 15px;
+  color: #616161;
+  border: none;
+}
 .profilepic {
   border-radius: 50%;
   width: 48px;
