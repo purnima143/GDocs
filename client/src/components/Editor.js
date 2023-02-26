@@ -5,7 +5,6 @@ import { io } from "socket.io-client";
 import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Header from "./Header";
-import Login from "./Login";
 import { useAuth0 } from "@auth0/auth0-react";
 
 let socket = null;
@@ -176,7 +175,7 @@ function Editor() {
       </Container>
     </>
   ) : (
-    <Login />
+    ""
   );
 }
 

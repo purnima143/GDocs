@@ -46,16 +46,6 @@ function Home({ logOutbutton, profile, authenticated }) {
     navigate(path);
   };
 
-  useEffect(() => {
-    if (isAuthenticated) {
-      const url = sessionStorage.getItem("redirect_uri");
-      if (url?.length) {
-        // sessionStorage.setItem("redirect_uri", null);
-        sessionStorage.removeItem("redirect_uri");
-        navigate(url);
-      }
-    }
-  }, [isAuthenticated, navigate]);
 
   useEffect(() => {
     const myemail = user?.email;
